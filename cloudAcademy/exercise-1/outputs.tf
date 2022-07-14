@@ -1,15 +1,15 @@
 output "vpc_id" {
-  value = aws_vpc.main.id
+  value = aws_vpc.exercise1-vpc.id
 }
 
-output "subnet1_id" {
-  value = aws_subnet.subnet1.id
+output "exercise1-public-subnet" {
+  value = aws_subnet.exercise1-public-subnet.id
 }
 
-output "subnet2_id" {
-  value = aws_subnet.subnet2.id
+output "exercise1-private-subnet" {
+  value = aws_subnet.exercise1-private-subnet.id
 }
 
 output "web_instance_public_ip" {
-  value = aws_instance.web.public_ip
+  value = aws_instance.ubuntu_web.public_ip
 }
