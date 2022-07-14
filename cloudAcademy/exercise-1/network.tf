@@ -21,6 +21,11 @@ resource "aws_route_table" "exercise-1-crt" {
   }
 }
 
+resource "aws_route_table_association" "exercise-1-rta" {
+  subnet_id = aws_subnet.exercise1-public-subnet.id
+  route_table_id = aws_route_table.exercise-1-crt.id
+}
+
 resource "aws_security_group" "exercise-1-sg" {
   vpc_id = aws_vpc.exercise1-vpc.id
 
